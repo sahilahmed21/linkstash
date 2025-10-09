@@ -11,7 +11,6 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
         if (token) {
             api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-            // Here you could fetch user details if needed: api.get('/user').then(...)
         }
         setLoading(false);
     }, [token]);
